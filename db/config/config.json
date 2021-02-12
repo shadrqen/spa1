@@ -1,0 +1,29 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "Ole2020...",
+    "database": "spa_dev",
+    "host": "172.18.0.2",
+    "port": 5432,
+    "dialect": "postgresql",
+    "databaseVersion": "9.6.6"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "Ole2020...",
+    "database": "spa_test",
+    "host": "172.20.0.2",
+    "port": 5432,
+    "dialect": "postgresql",
+    "databaseVersion": "9.6.6"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "Ole2020...",
+    "database": "spa",
+    "host": "172.20.0.2",
+    "port": 5432,
+    "dialect": "postgresql",
+    "databaseVersion": "9.6.6"
+  }
+}
