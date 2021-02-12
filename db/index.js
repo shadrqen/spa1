@@ -16,6 +16,10 @@ const corsOptions = {
 }
 /* Enabling CORS in the app */
 app.use(cors(corsOptions))
+const dir = './logs'
+if (!fs.existsSync(dir)){
+    fs.mkdirSync(dir)
+}
 const accessLogStream = fs.createWriteStream(__dirname.concat('/logs/access.log'), { flags: 'a' })
 // setup the logger
 app.use(logger('combined', { stream: accessLogStream }))
