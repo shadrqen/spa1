@@ -1,0 +1,17 @@
+version: '2'
+services:
+  client:
+    build:
+      context: .
+      dockerfile: ./clientside/Dockerfile
+    network_mode: host
+  server:
+    build:
+      context: .
+      dockerfile: ./serverside/Dockerfile
+    network_mode: host
+  db:
+    build:
+      context: .
+      dockerfile: ./db/Dockerfile
+    network_mode: host

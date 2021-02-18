@@ -5,11 +5,9 @@ FROM node:current-slim
 WORKDIR /app
 
 # Copy the file from your host to your current location
-COPY package.json ./
+COPY ./serverside/package.json ./
 
-# Run the command inside your image filesystem
-#RUN npm install -g npm@latest
-RUN npm install -g npm@7.5.3
+# Install dependencies
 RUN npm install
 
 RUN npm install -g nodemon
@@ -17,9 +15,7 @@ RUN npm install -g nodemon
 #RUN npm install --save-dev sequelize-cli
 
 # Copy the rest of your app's source code from your host to your image filesystem.
-COPY . .
+COPY ./serverside .
 
 # Run the specified command within the container.
 CMD [ "nodemon", "index.js" ]
-
-#RUN npx sequelize-cli db:migrate
